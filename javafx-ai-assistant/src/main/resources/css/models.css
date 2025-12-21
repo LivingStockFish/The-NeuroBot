@@ -1,0 +1,63 @@
+.models-background {
+    -fx-background-image: url("/icon/models.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* Main card padding only */
+.models-card {
+    -fx-padding: 40;
+}
+
+/* Title */
+.models-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: gold;
+}
+
+/* Row background block */
+.model-row {
+    -fx-background-color: rgba(0, 0, 0, 0.40);   /* Slight black transparency */
+    -fx-background-radius: 16;
+    -fx-padding: 12 20;
+    -fx-min-width: 600;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+}
+
+/* Text label */
+.model-label {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+/* ComboBox */
+.model-combo {
+    -fx-pref-width: 200;
+    -fx-font-size: 16px;
+}
+
+/* Buttons */
+.download-btn {
+    -fx-font-size: 16px;
+    -fx-background-color: #4f46e5;
+    -fx-text-fill: white;
+    -fx-border-color: gold;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-padding: 8 20;
+}
+
+.download-btn:hover {
+    -fx-background-color: #4f46e5;
+}
+
+.back-btn {
+    -fx-cursor: hand;
+}
+
+.back-btn:hover {
+    -fx-opacity: 0.7;
+}

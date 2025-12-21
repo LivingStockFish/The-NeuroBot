@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.genuinecoder.aiassistant.gui.ModelsController"
+           stylesheets="@../css/models.css"
+           styleClass="models-background">
+
+    <VBox alignment="TOP_CENTER" spacing="0" style="-fx-padding: 50 0 0 0;">
+        <!-- Header with back button and title -->
+        <HBox alignment="CENTER" spacing="20">
+            <ImageView fx:id="backButton"
+                      fitHeight="40" fitWidth="40"
+                      pickOnBounds="true" preserveRatio="true"
+                      onMouseClicked="#handleBack"
+                      styleClass="back-btn"/>
+            <Label text="Available Models" styleClass="models-title"/>
+        </HBox>
+
+        <ScrollPane fitToWidth="true"
+                   hbarPolicy="NEVER"
+                   vvalue="1.0"
+                   style="-fx-background: transparent; -fx-background-color: transparent;">
+
+        <VBox alignment="CENTER" spacing="40" styleClass="models-card">
+            <padding>
+                <Insets top="20" right="40" bottom="40" left="40"/>
+            </padding>
+
+            <VBox spacing="10" alignment="CENTER">
+
+                <!-- ROW 1 -->
+                <HBox spacing="20" alignment="CENTER_LEFT" styleClass="model-row">
+                    <Label text="Gemma 3" styleClass="model-label"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <ComboBox fx:id="combo1" prefWidth="200" styleClass="model-combo"/>
+                    <Button text="Download" fx:id="download1" onAction="#handleDownload1" styleClass="download-btn"/>
+                </HBox>
+
+                <!-- ROW 2 -->
+                <HBox spacing="20" alignment="CENTER_LEFT" styleClass="model-row">
+                    <Label text="LLaVA" styleClass="model-label"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <ComboBox fx:id="combo2" prefWidth="200" styleClass="model-combo"/>
+                    <Button text="Download" fx:id="download2" onAction="#handleDownload2" styleClass="download-btn"/>
+                </HBox>
+
+                <!-- ROW 3 -->
+                <HBox spacing="20" alignment="CENTER_LEFT" styleClass="model-row">
+                    <Label text="LLaVA-Llama3" styleClass="model-label"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <ComboBox fx:id="combo3" prefWidth="200" styleClass="model-combo"/>
+                    <Button text="Download" fx:id="download3" onAction="#handleDownload3" styleClass="download-btn"/>
+                </HBox>
+
+                <!-- ROW 4 -->
+                <HBox spacing="20" alignment="CENTER_LEFT" styleClass="model-row">
+                    <Label text="Qwen2.5-VL" styleClass="model-label"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <ComboBox fx:id="combo4" prefWidth="200" styleClass="model-combo"/>
+                    <Button text="Download" fx:id="download4" onAction="#handleDownload4" styleClass="download-btn"/>
+                </HBox>
+
+                <!-- ROW 5 -->
+                <HBox spacing="20" alignment="CENTER_LEFT" styleClass="model-row">
+                    <Label text="Qwen3-VL" styleClass="model-label"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <ComboBox fx:id="combo5" prefWidth="200" styleClass="model-combo"/>
+                    <Button text="Download" fx:id="download5" onAction="#handleDownload5" styleClass="download-btn"/>
+                </HBox>
+
+                <!-- ROW 6 -->
+                <HBox spacing="20" alignment="CENTER_LEFT" styleClass="model-row">
+                    <Label text="Llama 3.2 vision" styleClass="model-label"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <ComboBox fx:id="combo6" prefWidth="200" styleClass="model-combo"/>
+                    <Button text="Download" fx:id="download6" onAction="#handleDownload6" styleClass="download-btn"/>
+                </HBox>
+
+                <!-- ROW 7 -->
+                <HBox spacing="20" alignment="CENTER_LEFT" styleClass="model-row">
+                    <Label text="Llama 4" styleClass="model-label"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <ComboBox fx:id="combo7" prefWidth="200" styleClass="model-combo"/>
+                    <Button text="Download" fx:id="download7" onAction="#handleDownload7" styleClass="download-btn"/>
+                </HBox>
+
+            </VBox>
+        </VBox>
+    </ScrollPane>
+    </VBox>
+</StackPane>

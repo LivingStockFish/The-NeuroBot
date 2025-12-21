@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<StackPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.genuinecoder.aiassistant.gui.LoginController"
+           stylesheets="@../css/login.css"
+           styleClass="page-background">
+
+    <VBox fx:id="loginCard" alignment="CENTER" spacing="25" styleClass="login-card">
+
+        <Label text="Welcome Back" styleClass="title-label"/>
+
+        <TextField fx:id="emailField" promptText="Email" />
+        <PasswordField fx:id="passwordField" promptText="Password" />
+
+        <Button fx:id="loginButton" text="Login" onAction="#handleLogin" styleClass="gold-button"/>
+
+        <Label fx:id="messageLabel" text="" style="-fx-text-fill: red; -fx-font-weight: bold;"/>
+
+        <HBox alignment="CENTER" spacing="5">
+            <Label text="Don’t have an account?" styleClass="account-label" />
+            <Hyperlink text="Create one" onAction="#goToRegister" />
+        </HBox>
+
+    </VBox>
+
+</StackPane>

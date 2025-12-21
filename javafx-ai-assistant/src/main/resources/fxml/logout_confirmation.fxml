@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.genuinecoder.aiassistant.gui.LogoutConfirmationController"
+      spacing="20" alignment="CENTER"
+      prefWidth="300" prefHeight="150"
+      style="-fx-background-image: url('icon/background.png');
+             -fx-background-size: cover;
+             -fx-background-position: center center;
+             -fx-background-radius: 10;
+             -fx-border-color: gold;
+             -fx-padding: 20;">
+
+    <Label text="Are you sure you want to logout?" 
+           styleClass="popup-label"
+           wrapText="true"
+           textAlignment="CENTER"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="yesButton" text="Yes" styleClass="popup-btn"/>
+        <Button fx:id="noButton" text="No" styleClass="popup-btn"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<StackPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.genuinecoder.aiassistant.gui.RegisterController"
+           stylesheets="@../css/register.css"
+           styleClass="page-background">
+
+    <VBox fx:id="registerCard" alignment="CENTER" spacing="25" styleClass="register-card">
+
+        <Label text="Create Account" styleClass="title-label"/>
+
+        <TextField fx:id="nameField" promptText="Full Name" />
+        <TextField fx:id="emailField" promptText="Email" />
+        <PasswordField fx:id="passwordField" promptText="Password" />
+        <ComboBox fx:id="roleBox" promptText="Select Role" />
+
+        <Button fx:id="registerButton" text="Create Account" onAction="#handleRegister" styleClass="gold-button"/>
+
+        <Label fx:id="messageLabel" text="" style="-fx-text-fill: red; -fx-font-weight: bold;"/>
+
+        <HBox alignment="CENTER" spacing="5">
+            <Label text="Already have an account?" styleClass="account-label" />
+            <Hyperlink text="Login" onAction="#goToLogin" />
+        </HBox>
+
+    </VBox>
+
+</StackPane>

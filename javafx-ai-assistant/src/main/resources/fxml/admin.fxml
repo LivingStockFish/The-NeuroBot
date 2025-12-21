@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<StackPane fx:id="rootPane"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.genuinecoder.aiassistant.gui.AdminController"
+          stylesheets="@../css/admin.css"
+          styleClass="admin-background">
+
+    <!-- Main centered card -->
+    <VBox alignment="CENTER" spacing="25" styleClass="admin-card">
+
+        <!-- Dynamic welcome label -->
+        <Label fx:id="welcomeLabel" styleClass="admin-welcome"/>
+
+        <!-- NEW small label -->
+        <Label text="Choose A Task" styleClass="admin-subtitle"/>
+
+        <!-- 2x2 grid for buttons -->
+        <GridPane hgap="200" vgap="100" alignment="CENTER">
+
+            <Button text="Chat"        onAction="#handleChatButton" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="admin-btn"/>
+            <Button text="Models"      onAction="#handleModelsButton" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="admin-btn"/>
+
+            <Button text="Feedbacks"   onAction="#handleFeedbackButton" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="admin-btn"/>
+            <Button text="Logout"      onAction="#handleLogoutButton" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="admin-btn"/>
+
+        </GridPane>
+
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.genuinecoder.aiassistant.gui.FeedbackController"
+            style="-fx-background-image: url('icon/background.png');
+                   -fx-background-size: cover;
+                   -fx-background-position: center center;
+                   -fx-text-fill: white;">
+
+    <VBox spacing="20" alignment="TOP_CENTER" prefWidth="600"
+          AnchorPane.topAnchor="30" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <Label text="💬 Chatbot Feedback Form"
+               style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+        <!-- Question 1 -->
+        <VBox spacing="10">
+            <Label text="1. How satisfied are you with the chatbot’s responses?"
+                   style="-fx-text-fill: gold; -fx-font-size: 14px;"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="q1Star1" text="☆"/>
+                <Button fx:id="q1Star2" text="☆"/>
+                <Button fx:id="q1Star3" text="☆"/>
+                <Button fx:id="q1Star4" text="☆"/>
+                <Button fx:id="q1Star5" text="☆"/>
+            </HBox>
+        </VBox>
+
+        <!-- Question 2 -->
+        <VBox spacing="10">
+            <Label text="2. How easy was it to use the chatbot interface?"
+                   style="-fx-text-fill: gold; -fx-font-size: 14px;"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="q2Star1" text="☆"/>
+                <Button fx:id="q2Star2" text="☆"/>
+                <Button fx:id="q2Star3" text="☆"/>
+                <Button fx:id="q2Star4" text="☆"/>
+                <Button fx:id="q2Star5" text="☆"/>
+            </HBox>
+        </VBox>
+
+        <!-- Question 3 -->
+        <VBox spacing="10">
+            <Label text="3. How likely are you to recommend this chatbot to others?"
+                   style="-fx-text-fill: gold; -fx-font-size: 14px;"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="q3Star1" text="☆"/>
+                <Button fx:id="q3Star2" text="☆"/>
+                <Button fx:id="q3Star3" text="☆"/>
+                <Button fx:id="q3Star4" text="☆"/>
+                <Button fx:id="q3Star5" text="☆"/>
+            </HBox>
+        </VBox>
+
+        <!-- Text Area -->
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Additional comments or suggestions:"
+                   style="-fx-text-fill: gold; -fx-font-size: 14px;"/>
+            <TextArea fx:id="feedbackText" prefRowCount="5" prefWidth="400" wrapText="true"
+                      style="-fx-background-color: #1e1e1e; -fx-text-fill: black;
+                             -fx-border-color: #444; -fx-border-radius: 8;"/>
+        </VBox>
+
+        <!-- Submit Button -->
+        <Button text="Submit Feedback" onAction="#handleSubmit"
+                style="-fx-background-color:#4f46e5; -fx-text-fill: white;
+                       -fx-font-size: 14px; -fx-padding: 10 20 10 20; -fx-background-radius: 20;"/>
+    </VBox>
+
+</AnchorPane>

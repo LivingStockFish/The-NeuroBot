@@ -1,0 +1,80 @@
+/* Full-page background image */
+.page-background {
+    -fx-background-image: url("/icon/background.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+
+/* Title label */
+.title-label {
+    -fx-font-size: 26px;
+    -fx-text-fill: gold;
+    -fx-font-weight: bold;
+}
+
+/* Input fields */
+.text-field, .password-field, .combo-box {
+    -fx-background-color: transparent;
+    -fx-border-color: gold;
+    -fx-border-radius: 6;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #b5b5b5;
+    -fx-pref-width: 250;
+}
+
+/* Gold button */
+.gold-button {
+    -fx-background-color: gold;
+    -fx-text-fill: white; /* force text color white */
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-pref-width: 250;
+    -fx-cursor: hand;
+}
+
+/* All other buttons */
+.button {
+    -fx-text-fill: white; /* force all button text to white */
+}
+
+/* Social login buttons (transparent style) */
+.social-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white; /* force text white */
+    -fx-border-color: gold;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 6 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0, 0, 2);
+}
+
+.social-button:hover {
+    -fx-background-color: #f1f1f1;
+    -fx-text-fill: white; /* keep text white even on hover */
+}
+
+/* "Or continue with" label */
+.or-label {
+    -fx-text-fill: white;
+}
+
+/* Login/Register card */
+.register-card, .login-card {
+    -fx-padding: 30;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 5);
+}
+
+/* Account label text */
+.account-label {
+    -fx-text-fill: white;
+}
+
+/* Hyperlink style */
+.hyperlink {
+    -fx-text-fill: gold;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.genuinecoder.aiassistant.gui.FeedbackCardController"
+            fx:id="cardRoot"
+            styleClass="feedback-card"
+            prefWidth="500">
+
+    <VBox spacing="10" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <!-- Username + Date -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label fx:id="lblUser" styleClass="feedback-user"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblDate" styleClass="feedback-date"/>
+        </HBox>
+
+        <!-- Ratings -->
+        <HBox spacing="20" alignment="CENTER_LEFT">
+
+            <Label text="Satisfaction:" styleClass="rating-title"/>
+            <Label fx:id="lblUiRating" styleClass="rating-stars"/>
+
+            <Label text="Easy to Use:" styleClass="rating-title"/>
+            <Label fx:id="lblAccuracyRating" styleClass="rating-stars"/>
+
+            <Label text="Likely to Recommend:" styleClass="rating-title"/>
+            <Label fx:id="lblHelpRating" styleClass="rating-stars"/>
+
+        </HBox>
+
+        <!-- Message -->
+        <Label fx:id="lblMessage"
+               wrapText="true"
+               styleClass="feedback-message"/>
+
+    </VBox>
+
+</AnchorPane>

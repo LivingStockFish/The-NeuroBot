@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="rootPane"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.genuinecoder.aiassistant.gui.MainApplicationController"
+            prefWidth="1000" prefHeight="600"
+            stylesheets="@/css/main.css">
+
+    <!-- SIDEBAR -->
+    <left>
+        <VBox fx:id="sidebar" styleClass="sidebar" spacing="10" alignment="TOP_CENTER"
+              visible="false" managed="false"
+              style="-fx-background-image: url('icon/side.png');
+                     -fx-background-size: cover;">
+            <Button fx:id="newChatBtn" text="New Chat" styleClass="sidebar-btn" onAction="#handleNewChatAction"/>
+            <Button fx:id="feedbackBtn" text="Feedback" styleClass="sidebar-btn" onAction="#handleFeedbackAction"/>
+            <Button fx:id="logoutBtn" text="Logout" styleClass="sidebar-btn" onAction="#handleLogoutAction"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Label text="Chat History" styleClass="sidebar-history-label"/>
+            <ListView fx:id="chatHistoryList" styleClass="sidebar-history-list"/>
+        </VBox>
+    </left>
+
+    <!-- TOP BAR -->
+    <top>
+        <StackPane fx:id="topBar" styleClass="top-bar"
+                   style="-fx-background-image: url('icon/top.png');
+                          -fx-background-size: cover;">
+            
+            <Button fx:id="menuButton" text="☰" onAction="#toggleSidebar"
+                    style="-fx-font-size: 18pt; -fx-background-color: transparent; -fx-text-fill: white;"
+                    StackPane.alignment="CENTER_LEFT"/>
+
+            <HBox spacing="10" alignment="CENTER" StackPane.alignment="CENTER" mouseTransparent="true">
+                <Label text="NeuroBot" styleClass="top-bar-label"/>
+                <ImageView fitWidth="48" fitHeight="48" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/icon/icon.png"/>
+                </ImageView>
+            </HBox>
+
+        </StackPane>
+    </top>
+
+    <!-- CENTER CHAT AREA -->
+    <center>
+        <ScrollPane fx:id="chatScroll" fitToWidth="true" style="-fx-background-color: white;">
+            <VBox fx:id="chatContainer" spacing="12" style="-fx-background-color: transparent;"
+                  styleClass="chat-container">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <!-- BOTTOM BAR -->
+    <bottom>
+        <VBox spacing="5">
+
+            <HBox fx:id="thinkingContainer" alignment="CENTER" visible="false" managed="false" spacing="10"
+                  style="-fx-padding: 5;">
+                <Label text="NeuroBot is thinking..." style="-fx-text-fill: #4f46e5; -fx-font-style: italic;"/>
+                <ProgressIndicator fx:id="thinkingIndicator" prefWidth="20" prefHeight="20"/>
+            </HBox>
+
+            <HBox fx:id="bottomBar" spacing="10" alignment="CENTER" styleClass="bottom-bar"
+                  style="-fx-background-image: url('icon/bottom.png');
+                         -fx-background-size: cover;">
+
+                <Button fx:id="imageButton" onAction="#handleButtonImagePickerAction" styleClass="image-btn">
+                    <graphic>
+                        <ImageView fitWidth="35" fitHeight="35" preserveRatio="true">
+                            <Image url="@/icon/image_icon.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <TextField fx:id="textAreaInput" promptText="Type your message..."
+                           styleClass="input-field" HBox.hgrow="ALWAYS"/>
+
+                <Button fx:id="sendButton" onAction="#handleButtonSendAction" styleClass="send-btn">
+                    <graphic>
+                        <ImageView fitWidth="35" fitHeight="35" preserveRatio="true">
+                            <Image url="@/icon/send_icon.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>

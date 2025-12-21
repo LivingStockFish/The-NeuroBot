@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.genuinecoder.aiassistant.gui.AdminKeyPopupController"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="320" prefHeight="200"
+      style="-fx-background-image: url('icon/background.png');
+             -fx-background-size: cover;
+             -fx-background-position: center center;
+             -fx-border-color: gold;">
+
+    <Label text="Enter Admin Access Key"
+           style="-fx-font-size: 18px; -fx-text-fill: white;"
+           textAlignment="CENTER"/>
+
+    <PasswordField fx:id="keyField"
+                   promptText="Enter key..."
+                   style="-fx-background-radius: 10; -fx-padding: 10;"/>
+
+    <HBox spacing="15" alignment="CENTER">
+
+        <!-- FIX ADDED HERE -->
+        <Button fx:id="confirmButton"
+                text="Confirm"
+                styleClass="popup-btn"
+                onAction="#handleConfirm"/>
+
+        <!-- FIX ADDED HERE -->
+        <Button fx:id="cancelButton"
+                text="Cancel"
+                styleClass="popup-btn"
+                onAction="#handleCancel"/>
+
+    </HBox>
+
+</VBox>
